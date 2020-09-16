@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背单词</title>
+  <style>
+    .btns{
+      margin-left: 800px;
+    }
+    .createBtn{
+      margin-left: 10px;
+    }
+    .deiete{
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      可以按键盘的F12键打开开发者工具的console面板查看使用说明
+    </div>
+    <div>
+      <h3>创建词单</h3>
+      <div>
+        正常创建：<input type="text" class="num" placeholder="多少个单词">
+        <button class="createBtn">创建</button>
+      </div>
+      <div style="margin-top:20px;">
+        快捷创建：<button class="fastCreateBtn">使用data对象快速创建</button>
+      </div>
+    </div>
+    <div class="wordTable">
+      <h3>词单</h3>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>单词</th>
+          <th>翻译</th>
+          <th>背单词</th>
+          <th>背翻译</th>
+        </tr>
+      </thead>
+      <tbody class="main">
+      </tbody>
+    </table>
+    <div class="btns">
+      <div>
+        <h3>控制出现与隐藏</h3>
+        <button class="wordsHide" onclick="HideAndAppear('words','hide');">英文隐藏</button>
+        <button class="wordsAppear" onclick="HideAndAppear('words','appear');">英文出现</button>
+        <button class="chineseHide" onclick="HideAndAppear('chinese','hide');">中文隐藏</button>
+        <button class="chineseAppear" onclick="HideAndAppear('chinese','appear');">中文出现</button>
+      </div>
+      <div>
+        <h3>检查按钮</h3>
+        <button class="checkChineseBtn" onclick="check('words')">检查英文</button>
+        <button class="checkWordsBtn" onclick="check('chinese')">检查中文</button>
+      </div>
+      <div>
+        <h3>清空按钮</h3>
+        <button class="clearChineseBtn" onclick="clearWord('words');">清空英文</button>
+        <button class="clearWordsBtn" onclick="clearWord('chinese');">清空中文</button>
+      </div>
+    </div>
+  </div>
+  <script src="./reciteWords.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+    }
+
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  var otable = document.createElement("table"); //创建table
+  document.body.appendChild(otable);
+  for (var i = 1; i <= 3; i++) {
+    var otr = document.createElement("tr"); //创建三个tr
+    otable.appendChild(otr); //将tr添加到table中
+    for (var j = 1; j <= 3; j++) {
+      var otd = document.createElement("td"); //创建三个td
+      otr.appendChild(otd); //将td添加到tr中
+      otd.innerHTML = parseInt(Math.random() * 99); //td内容设置为随机数
+    }
+    var d = document.createElement("td"); //创建td
+    otr.appendChild(d);
+    // 添加到Tr中
+    d.innerHTML = "删除";
+    d.onclick = function () {
+      this.parentNode.remove(); //点击删除
+    }
+
+  }
+</script> -->
